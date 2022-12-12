@@ -3,12 +3,12 @@ const modalContentWrapper = document.querySelector(".modal-window__content");
 document.addEventListener("click", modalHandler);
 
 function modalHandler(evt) {
-  const modalImgOpen = evt.target.closest(".accordion__content_img");
+  const modalImgToOpen = evt.target.closest(".accordion__content_img");
   const modalBtnClose = evt.target.closest(".modal-close");
 
-  if (modalImgOpen) {
-    const modalSelector = modalImgOpen.dataset.modal;
-    const imgSrc = modalImgOpen.getAttribute("src");
+  if (modalImgToOpen) {
+    const modalSelector = modalImgToOpen.dataset.modal;
+    const imgSrc = modalImgToOpen.getAttribute("src");
     const imageHTML = `
             <img class="modal__img" src="${imgSrc}">
         `;
@@ -22,8 +22,7 @@ function modalHandler(evt) {
     modalImg.remove();
     hideModal(document.querySelector(".modal-window"));
   }
-  //   Закрытие при клике на затемненный фон.
-  //
+  //   Закрытие модалки при клике на затемненный фон.
   //   if (evt.target.matches('#modal-backdrop')) { // backdrop click
   //     hideModal(document.querySelector('.modal-window.show'));
   //   }
