@@ -1,22 +1,21 @@
-const catalog = document.querySelector('.tabs__catalog')
+const catalog = document.querySelector(".tabs__catalog");
 
-getUsers()
-toggleFavoritesStatus()
+getUsers();
+toggleFavoritesStatus();
 
 async function getUsers() {
-    try {
-        const responce = await fetch('https://json.medrocket.ru/users/')
-        const usersArray = await responce.json()
-        renderUsers(usersArray)
-        
-    } catch (error) {
-        console.log(error)
-    }
+  try {
+    const responce = await fetch("https://json.medrocket.ru/users/");
+    const usersArray = await responce.json();
+    renderUsers(usersArray);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function renderUsers(usersArray) {
-    usersArray.map((user) => {
-        const userHTML = `
+  usersArray.map((user) => {
+    const userHTML = `
             <div class="accordion" data-collapse data-id="${user.id}">
                 <button class="accordion__btn">
                     <div class="accordion__header" data-collapse>
@@ -29,7 +28,6 @@ function renderUsers(usersArray) {
                 <div class="accordion__content"></div>
             </div>    
         `;
-        catalog.insertAdjacentHTML('beforeend', userHTML)    
-    })
+    catalog.insertAdjacentHTML("beforeend", userHTML);
+  });
 }
-

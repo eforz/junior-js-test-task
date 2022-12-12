@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Kirill test task</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <div class="container">
-        <div class="tabs">
-            <div class="tabs__nav">
-                <button class="tabs__nav-btn active" data-tab="#tab_1">Каталог</button>
-                <button class="tabs__nav-btn" data-tab="#tab_2">Избранное</button>
-            </div>
-            <div class="tabs__content">
-                <div class="tabs__item active" id="tab_1">
-                    <div class="tabs__catalog" active></div>   
-                </div>
-                <div class="tabs__item" id="tab_2">
-                    <div class="tabs__favorites">
-                        <div class="favorites__item-empty" data-empty>
-                            <img  class="favorites__item-img" src="./assets/empty.png" alt="">
-                            <h2 class="favorites__item-title">Список избранного пуст</h2>
-                            <h3 class="favorites__item-subtitle">Добавляйте изображения нажимая на звёзточки</h3>
-                        </div>
-                        <div class="favorites__img-wrapper"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="tabs">
+        <div class="tabs__nav">
+          <button class="tabs__nav-btn active" data-tab="#tab_1">Каталог</button>
+          <button class="tabs__nav-btn" data-tab="#tab_2">Избранное</button>
         </div>
+        <div class="tabs__content">
+          <div class="tabs__item active" id="tab_1">
+            <div class="tabs__catalog" active></div>
+          </div>
+          <div class="tabs__item" id="tab_2">
+            <div class="tabs__favorites">
+              <div class="favorites__item-empty" data-empty>
+                <img class="favorites__item-img" src="./assets/empty.png" alt=""/>
+                <h2 class="favorites__item-title">Список избранного пуст</h2>
+                <h3 class="favorites__item-subtitle">Добавляйте изображения нажимая на звёзточки</h3>
+              </div>
+              <div class="favorites__img-wrapper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div id="modal_1" class="modal-window">
-        <div class="modal-window__content"></div>
+      <div class="modal-window__content"></div>
     </div>
     <div class="modal-window__backdrop hidden" id="modal-backdrop">
-        <span href="#" class="modal-close">⨉</span>
+      <span href="#" class="modal-close">⨉</span>
     </div>
 
     <script src="./js/tabs.js"></script>
@@ -44,5 +47,5 @@
     <script src="./js/renderAlbums.js"></script>
     <script src="./js/imageCard.js"></script>
     <script src="./js/modal.js"></script>
-</body>
+  </body>
 </html>
