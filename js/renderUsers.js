@@ -1,17 +1,8 @@
 const catalog = document.querySelector(".tabs__catalog");
+const usersUrl = "https://json.medrocket.ru/users/"
 
-getUsers();
+fetchService(usersUrl, renderUsers)
 toggleFavoritesStatus();
-
-async function getUsers() {
-  try {
-    const responce = await fetch("https://json.medrocket.ru/users/");
-    const usersArray = await responce.json();
-    renderUsers(usersArray);
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 function renderUsers(usersArray) {
   usersArray.map((user) => {
